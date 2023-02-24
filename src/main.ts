@@ -1,0 +1,10 @@
+import { createApp } from 'vue';
+import { installAppPlugin } from './apps';
+import './style.css';
+import './plugins/mouseHelper';
+import App from './App.vue';
+import { store, key } from './store/index';
+const app = createApp(App);
+app.use(store, key);
+app.use(installAppPlugin, {});
+app.mount('#app');
