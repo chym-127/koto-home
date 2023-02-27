@@ -56,12 +56,13 @@ const menus = computed(() => {
       ></component>
       <!-- <Pacman></Pacman> -->
     </div>
-    <div class="footer w-full h-[50px] bg-[#fff]">
-      <div class="menus-list">
+    <div class="footer flex justify-between w-full h-[50px] bg-[#fff]">
+      <div class="menus-list flex-1">
         <div class="menu-item" v-for="menu in menus">
           <img :src="menu.icon" class="menu-item_icon" alt="" srcset="" />
         </div>
       </div>
+      <div class="tool-bar w-[150px]"></div>
     </div>
   </div>
 </template>
@@ -88,7 +89,7 @@ const menus = computed(() => {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 50px;
+  bottom: 0;
   width: 100vw;
 }
 

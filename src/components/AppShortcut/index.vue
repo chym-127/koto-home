@@ -28,8 +28,8 @@ const emit = defineEmits<{
 .app-shortcut {
   width: 66px;
   .app-shortcut_icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 }
 </style>

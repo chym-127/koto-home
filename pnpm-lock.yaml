@@ -3,12 +3,15 @@ lockfileVersion: 5.4
 specifiers:
   '@turf/turf': ^6.5.0
   '@types/node': ^18.14.1
+  '@types/three': ^0.149.0
   '@types/uuid': ^9.0.1
   '@vitejs/plugin-vue': ^4.0.0
   autoprefixer: ^10.4.13
   less: ^4.1.3
   postcss: ^8.4.21
   tailwindcss: ^3.2.7
+  three: ^0.150.0
+  tle.js: ^4.7.3
   typescript: ^4.9.3
   uuid: ^9.0.0
   vite: ^4.1.0
@@ -20,11 +23,14 @@ dependencies:
   '@turf/turf': 6.5.0
   '@types/node': 18.14.1
   less: 4.1.3
+  three: 0.150.0
+  tle.js: 4.7.3
   uuid: 9.0.0
   vue: 3.2.47
   vuex: 4.0.2_vue@3.2.47
 
 devDependencies:
+  '@types/three': 0.149.0
   '@types/uuid': 9.0.1
   '@vitejs/plugin-vue': 4.0.0_vite@4.1.4+vue@3.2.47
   autoprefixer: 10.4.13_postcss@8.4.21
@@ -1315,8 +1321,18 @@ packages:
   /@types/node/18.14.1:
     resolution: {integrity: sha512-QH+37Qds3E0eDlReeboBxfHbX9omAcBCXEzswCu6jySP642jiM3cYSIkU/REqwhCUqXdonHFuBfJDiAJxMNhaQ==}
 
+  /@types/three/0.149.0:
+    resolution: {integrity: sha512-fgNBm9LWc65ER/W0cvoXdC0iMy7Ke9e2CONmEr6Jt8sDSY3sw4DgOubZfmdZ747dkPhbQrgRQAWwDEr2S/7IEg==}
+    dependencies:
+      '@types/webxr': 0.5.1
+    dev: true
+
   /@types/uuid/9.0.1:
     resolution: {integrity: sha512-rFT3ak0/2trgvp4yYZo5iKFEPsET7vKydKF+VRCxlQ9bpheehyAJH89dAkaLEq/j/RZXJIqcgsmPJKUP1Z28HA==}
+    dev: true
+
+  /@types/webxr/0.5.1:
+    resolution: {integrity: sha512-xlFXPfgJR5vIuDefhaHuUM9uUgvPaXB6GKdXy2gdEh8gBWQZ2ul24AJz3foUd8NNKlSTQuWYJpCb1/pL81m1KQ==}
     dev: true
 
   /@vitejs/plugin-vue/4.0.0_vite@4.1.4+vue@3.2.47:
@@ -2229,6 +2245,10 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     optional: true
 
+  /satellite.js/4.1.4:
+    resolution: {integrity: sha512-OGUrs1GoGKjy9FYbW2ZaM5slaPfJaYrcxjE3YQTeR/OGyFPCxb6HK22Chao55POU06pdmNAdW5rtKJURse0+XA==}
+    dev: false
+
   /sax/1.2.4:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
     optional: true
@@ -2297,8 +2317,19 @@ packages:
       - ts-node
     dev: true
 
+  /three/0.150.0:
+    resolution: {integrity: sha512-12oqqBZom9fb5HtX3rD8qPVnamojuiN5Os7r0x8s3HQ+WHRwnEyzl2XU3aEKocsDkG++rkE9+HWzx77O59NXtw==}
+    dev: false
+
   /tinyqueue/2.0.3:
     resolution: {integrity: sha512-ppJZNDuKGgxzkHihX8v9v9G5f+18gzaTfrukGrq6ueg0lmH4nqVnA2IPG0AEH3jKEk2GRJCUhDoqpoiw3PHLBA==}
+    dev: false
+
+  /tle.js/4.7.3:
+    resolution: {integrity: sha512-0vMxx0kF9APVOGqOHY80UhP7VUTwztmVp27dBlqhHFYCWZHM+KqeqvNyInGCx7W7+dNX36mxUqSl0HyCX3bWfQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      satellite.js: 4.1.4
     dev: false
 
   /to-fast-properties/2.0.0:

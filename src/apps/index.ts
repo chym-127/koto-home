@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import Pacman from './pacman/index.vue';
+import Earth from './Earth/index.vue';
 import pacmanIco from '@assets/app-icons/pac-man.ico';
 
 enum AppState {
@@ -35,7 +36,7 @@ interface AppInstance {
   uuid: string;
   appUuid: string;
   componentName: string;
-  icon: string,
+  icon: string;
   state: AppInstanceState;
   zIndex: number;
 }
@@ -57,7 +58,24 @@ const pacman: App = {
   component: Pacman,
 };
 
-const apps: App[] = [pacman];
+const earth: App = {
+  name: '卫星轨道',
+  uuid: uuidv4(),
+  state: AppState.STOP,
+  componentName: 'Earth',
+  icon: pacmanIco,
+  windowOptions: {
+    width: 500,
+    height: 500,
+  },
+  options: {
+    maxInstanceCount: 1,
+  },
+  instances: [],
+  component: Earth,
+};
+
+const apps: App[] = [pacman, earth];
 const appInstances: AppInstance[] = [];
 function getApps(): App[] {
   return apps;
